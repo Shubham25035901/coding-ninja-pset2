@@ -10,7 +10,6 @@ const ts = Date.now();
 
 const hash = MD5(ts + privateKey + publicKey);
 
-
 const inputBox = document.getElementById('hero-input')
 const form = document.querySelector('form')
 const resultContainer = document.getElementById('result')
@@ -45,7 +44,7 @@ function display(res) {
     })
 }
 
-console.log(`${API_URL}${endpoint}?${ts}&apikey=${publicKey}&hash=${hash}`);
+//console.log(`${API_URL}${endpoint}?${ts}&apikey=${publicKey}&hash=${hash}`);
 
 
 // axios.get(`${API_URL}${endpoint}?ts=${ts}&apiKey=${publicKey}&hash=${hash}`).then(data => console.log(data))
