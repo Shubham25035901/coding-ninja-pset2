@@ -24,20 +24,20 @@ form.addEventListener('submit', e => {
     // Here fetching the data from the API and passing appropriate parameters
     fetch(`${API_URL}${endpoint}?name=${superheroName}&ts=${ts}&apikey=${publicKey}&hash=${hash}`)
     .then(res => res.json()) // Resolving json response
-    .then(data => display(data)) // Pass JSON data to display
+    .then(data => display(data)) // Passing JSON data to display function
 })
 
 function display(res) {
     const {data} = res;
     const {results} = data;
     results.map(hero => {
+        // Here we are generating HTML element from the JSON data which we have fetched from the API
         const HTML = `
             <div class="detail">
             <h2>${hero.name}</h2>
             <p>${hero.description ? hero.description : "No description"}</p>
             </div>
             <img src="${hero.thumbnail.path+'.'+hero.thumbnail.extension}" alt=${hero.name} />
-
         `
         resultContainer.innerHTML = HTML;
         resultContainer.style.padding = '.75em'
