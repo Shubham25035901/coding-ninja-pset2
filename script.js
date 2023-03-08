@@ -17,19 +17,20 @@ resultContainer.style.padding = '0'
 resultContainer.style.border = '0'
 
 form.addEventListener('submit', e => {
+    //Preventing form from reload
     e.preventDefault()
     const superheroName = inputBox.value.toLowerCase()
 
+    // Here fetching the data from the API and passing appropriate parameters
     fetch(`${API_URL}${endpoint}?name=${superheroName}&ts=${ts}&apikey=${publicKey}&hash=${hash}`)
-    .then(res => res.json())
-    .then(data => display(data))
+    .then(res => res.json()) // Resolving json response
+    .then(data => display(data)) // Pass JSON data to display
 })
 
 function display(res) {
     const {data} = res;
     const {results} = data;
     results.map(hero => {
-       
         const HTML = `
             <div class="detail">
             <h2>${hero.name}</h2>
@@ -43,8 +44,3 @@ function display(res) {
         resultContainer.style.border = '2px solid #fff'
     })
 }
-
-//console.log(`${API_URL}${endpoint}?${ts}&apikey=${publicKey}&hash=${hash}`);
-
-
-// axios.get(`${API_URL}${endpoint}?ts=${ts}&apiKey=${publicKey}&hash=${hash}`).then(data => console.log(data))
