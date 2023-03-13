@@ -1,0 +1,209 @@
+:root{
+    -md-dark-color:black;
+    --dark-color:black
+
+}
+body{
+    color: white;
+    background-color: black;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+li{
+    list-style: none;
+}
+
+#heading-div{
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+#containers{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: 90vh;
+   justify-content: space-evenly;
+    
+}
+
+#left-side-container{
+    height: 100%;
+    width: 30%;
+}
+#name{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+#image-wrapper{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+#image-wrapper img{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+#right-side-container{
+    display: inline;
+    height: fit-content;
+    width: 60%;
+}
+
+#description{
+    margin-bottom: 15px;
+}
+
+#right-side-container div{
+    margin-bottom: 15px;
+}
+
+#right-side-container p{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#right-side-container ul{
+    margin-bottom: 15px;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+/* For Mobile */
+@media screen and (max-width: 540px ) {
+    #containers {
+        width: 400px;
+        position: relative;
+        display: block;
+        height: fit-content;
+        margin: auto;
+    }
+
+    #left-side-container{
+        height: 100%;
+        width: 100%;
+    }
+    
+    #image-wrapper{
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    #image-wrapper img{
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+    #right-side-container{
+        display: inline;
+        height: fit-content;
+        margin-top: 2pc;
+        width: 60%;
+    }
+    
+    #name{
+        font-size: 3ch;
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-align: center;
+     
+    }
+    #description{
+        margin-bottom: 15px;
+      
+    }
+    /* Movies List */
+    #series-list{
+        margin-bottom: 15px;
+        width: 90%;
+      
+    }
+    
+    #series-heading{
+        margin-bottom: 5px;
+        font-size: 2ch;
+        font-weight: bold;
+        margin-bottom: 15px;
+    
+    }
+    #series-list-ul{
+        margin-bottom: 15px;
+    
+    }
+    
+    /*Comics List*/
+    #comics-list{
+        margin-bottom: 15px;
+        width: 90%;
+    
+    }
+    
+    #comics-heading{
+        margin-bottom: 5px;
+        font-size: 2ch;
+        font-weight: bold;
+        margin-bottom: 15px;
+       
+    }
+    #comics-list-ul{
+        margin-bottom: 15px;
+      
+    }
+    
+    /*Stories List*/
+    
+    #stories-list{
+        margin-bottom: 15px;
+        width: 90%;
+      
+    }
+    
+    #stories-heading{
+        margin-bottom: 5px;
+        font-size: 2ch;
+        font-weight: bold;
+        margin-bottom: 15px;
+      
+    }
+    #stories-list-ul{
+        margin-bottom: 15px;
+     
+    }
+
+    
+
+
+
+}
+
+
+
+

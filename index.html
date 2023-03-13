@@ -1,21 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" type="module"></script>
-    <title>SuperHero Hunter JS</title>
-</head>
-<body>
-    <h1>SuperHero Hunter JS</h1>
-    <form>
-        <input type="text" id="hero-input" placeholder="Enter SuperHero">
-        <button type="submit">Search</button> 
-    </form>
-    <section id="result">
-    
-    </section>
-</body>
-</html>
+<Html>
+    <head>
+        <title>SuperHero Hunter</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
+        
+        <link rel="icon" href="https://icon-library.com/images/superhero-icon-png/superhero-icon-png-27.jpg">  
+    </head>
+    <body>
+        <div class="wrapper"> 
+            <div id="logo"> <!-- logo container-->
+                <div id="containers"> 
+                    <img src="https://static.wixstatic.com/media/2eeb6d_8d2a4563658743718f2a89108200d4b5~mv2.jpg/v1/fill/w_1200,h_1200,al_c,q_85/2eeb6d_8d2a4563658743718f2a89108200d4b5~mv2.jpg"/>
+                    <p id = "heading"> Super<span>Hero</span></p> 
+                </div>
+            </div>
+            <div class="search-container"> <!-- Search container on Homepage-->
+                <div class="search-element">
+                    <input type="text" class="form-control" placeholder="Search Supehero.." id="char-search-box"
+                    onkeyup="findChars()">
+                    <div class="search-list" id="search-list">
+                        <!-- searched super hero result will be added here -->
+                    </div>
+                </div>
+                <div>
+                <a id= "fav-link" href = "likedHeros/likedHeros.html"><button id="fav-buttton"> Favourites </button> </a> 
+                </div>
+            </div>
+            <div id="home-container"> <!-- Homepage Superhero -->
+                <div id="home-list">
+                    <ul id="home-list-ul">
+                    <!-- Single List item goes here-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="script.js"></script>
+
+</Html>
